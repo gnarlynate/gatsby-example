@@ -1,8 +1,36 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Hang Loose`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@Nathen_B`,
+    socials: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/Nathen_B`
+      },
+      {
+        name: `Github`,
+        url: `https://github.com/NBowes`
+      }
+    ],
+    menuLinks: [
+      {
+        name: `Surf Report`,
+        link: `/surf-report`
+      },
+      {
+        name: `Page 2`,
+        link: `/page-2`
+      },
+      {
+        name: `Blog`,
+        link: `/blog`
+      },
+      {
+        name: `Longboard`,
+        link: `/longboard`
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +55,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+    resolve: `gatsby-theme-blog`,
+    options: {
+      basePath: `/blog`
+    },
+   },
+   `gatsby-plugin-emotion`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
